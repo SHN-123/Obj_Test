@@ -74,6 +74,7 @@ public class req_res {
         }
         if(jsonPath.get("job") instanceof String){
             System.out.println("The updated job is: "+updatedJob);
+            System.out.println("Hello");
         }
        // System.out.println("After Updating Job:"+updatedJob); // Printing the updated job
         //System.out.println("After Updating Name:"+updatedName); // Printing the updated name
