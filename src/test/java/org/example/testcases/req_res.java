@@ -6,6 +6,7 @@ import junit.framework.Assert;
 import org.example.configurations.Endpoints;
 import org.example.configurations.EnvGlobalVals;
 import org.example.payloads.CrudPayload;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -19,27 +20,27 @@ public class req_res {
     public static String updatedName;
     public static String updatedJob;
 
-//    @BeforeClass
-//    public static void createNewUser(){
-//         payloads.CrudPayload user = new payloads.CrudPayload(name, job);  // using for getting and setting name and job field.
-//
-//         EnvGlobalVals.response = given() 			// json path which says: that when content type is json, and body has user object which contains name and job
-//        		 									// when post takes place with base url + the create api url, then status code should be 201 (creation code)
-//        		 									// then extract that response of the api.
-//                 .contentType("application/json")
-//                 .body(user)
-//                 .when().post(baseUrl+ Endpoints.create)
-//                 .then().statusCode(201).extract().response();
-//
-//          JsonPath jsonPath = EnvGlobalVals.response.jsonPath();  // Using jSon path then for getting values from the above creation.
-//          EnvGlobalVals.userName = jsonPath.get("name"); 		// Storing the name in the userName variable that we are getting from json
-//          EnvGlobalVals.userJob = jsonPath.get("job");			// Storing the job in the userName variable that we are getting from json
-//          ID = jsonPath.get("id");
-//          EnvGlobalVals.userId = Integer.parseInt(ID);			// Parsing the ID as we are getting string back so converting to Integer.
-//          Assert.assertNotNull(EnvGlobalVals.userId);			// Making sure that the ID does not contain null value.
-//          System.out.println("New User ID and Name is: "+EnvGlobalVals.userId + " " +EnvGlobalVals.userName);
-//    }
-//
+    @BeforeClass
+    public static void createNewUser(){
+         CrudPayload user = new CrudPayload(name, job);  // using for getting and setting name and job field.
+
+         EnvGlobalVals.response = given() 			// json path which says: that when content type is json, and body has user object which contains name and job
+        		 									// when post takes place with base url + the create api url, then status code should be 201 (creation code)
+        		 									// then extract that response of the api.
+                 .contentType("application/json")
+                 .body(user)
+                 .when().post(baseUrl+ Endpoints.create)
+                 .then().statusCode(201).extract().response();
+
+          JsonPath jsonPath = EnvGlobalVals.response.jsonPath();  // Using jSon path then for getting values from the above creation.
+          EnvGlobalVals.userName = jsonPath.get("name"); 		// Storing the name in the userName variable that we are getting from json
+          EnvGlobalVals.userJob = jsonPath.get("job");			// Storing the job in the userName variable that we are getting from json
+          ID = jsonPath.get("id");
+          EnvGlobalVals.userId = Integer.parseInt(ID);			// Parsing the ID as we are getting string back so converting to Integer.
+          Assert.assertNotNull(EnvGlobalVals.userId);			// Making sure that the ID does not contain null value.
+          System.out.println("New User ID and Name is: "+EnvGlobalVals.userId + " " +EnvGlobalVals.userName);
+    }
+
 //    @Test
 //    public void fetchUserList(){
 //        given().
@@ -52,7 +53,8 @@ public class req_res {
     @Test(priority = 1)
     public void updateUser(){
         CrudPayload user =
-                new CrudPayload(EnvGlobalVals.userName + " Nadeem", "Software" +EnvGlobalVals.userJob );
+                new CrudPayload(EnvGlobalVals.userName + "Nadeem", "Software" +EnvGlobalVals.userJob );
+      
         EnvGlobalVals.response =
             given()
                 .contentType("application/json")
@@ -63,8 +65,16 @@ public class req_res {
         JsonPath jsonPath = EnvGlobalVals.response.jsonPath();
         updatedName = jsonPath.get("name");
         updatedJob = jsonPath.get("job");
-        Assert.assertEquals(EnvGlobalVals.userName + " Nadeem", updatedName);
+       Assert.assertEquals(EnvGlobalVals.userName + "Nadeem", updatedName);
+       
         Assert.assertEquals("Software" +EnvGlobalVals.userJob, updatedJob);
+
+        if(jsonPath.get("name") instanceof String){
+            System.out.println("The updated name is: "+updatedName);
+        }
+        if(jsonPath.get("job") instanceof String){
+            System.out.println("The updated job is: "+updatedJob);
+        }
        // System.out.println("After Updating Job:"+updatedJob); // Printing the updated job
         //System.out.println("After Updating Name:"+updatedName); // Printing the updated name
        }

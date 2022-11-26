@@ -2,12 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-12T20:05:40 PKT" name="Default suite" finished-at="2022-11-12T20:05:43 PKT" duration-ms="3192">
+  <suite started-at="2022-11-26T17:31:15 PKT" name="Default suite" finished-at="2022-11-26T17:31:20 PKT" duration-ms="5323">
     <groups>
     </groups>
-    <test started-at="2022-11-12T20:05:40 PKT" name="Default test" finished-at="2022-11-12T20:05:43 PKT" duration-ms="3192">
+    <test started-at="2022-11-26T17:31:15 PKT" name="Default test" finished-at="2022-11-26T17:31:20 PKT" duration-ms="5323">
       <class name="org.example.testcases.req_res">
-        <test-method signature="updateUser()[pri:1, instance:org.example.testcases.req_res@130161f7]" started-at="2022-11-12T20:05:40 PKT" name="updateUser" finished-at="2022-11-12T20:05:43 PKT" duration-ms="3163" status="PASS">
+        <test-method is-config="true" signature="createNewUser()[pri:0, instance:org.example.testcases.req_res@1d9b7cce]" started-at="2022-11-26T17:31:15 PKT" name="createNewUser" finished-at="2022-11-26T17:31:19 PKT" duration-ms="4296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewUser -->
+        <test-method signature="updateUser()[pri:1, instance:org.example.testcases.req_res@1d9b7cce]" started-at="2022-11-26T17:31:19 PKT" name="updateUser" finished-at="2022-11-26T17:31:20 PKT" duration-ms="972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUser -->
