@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/VenD/IdeaProjects/Restassured-Test-1">
+        <classes><class name="org.example.testcases.req_res">
+            <methods>
+                <include name="fetchUserList"/>
+                <include name="updateUser"/>
+                <include name="partially_updateUser"/>
+                <include name="deleteUser"/>
+            </methods>
+        </class>
+            <class name="org.example.testcases.restful_booker">
+                <methods>
+                    <include name="createToken"/>
+                    <include name="fetch_booking_ids"/>
+                    <include name="fetch_booking_details"/>
+                    <include name="create_booking"/>
+                    <include name="update_booking"/>
+                    <include name="partially_updated_booking"/>
+                    <include name="delete_booking"/>
+                    <include name="check_Deleted_booking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

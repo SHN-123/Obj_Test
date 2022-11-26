@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-12T20:10:08 PKT" name="All Test Suite" finished-at="2022-11-12T20:10:33 PKT" duration-ms="24511">
+    <groups>
+    </groups>
+    <test started-at="2022-11-12T20:10:08 PKT" name="C:/Users/VenD/IdeaProjects/Restassured-Test-1" finished-at="2022-11-12T20:10:33 PKT" duration-ms="24511">
+      <class name="org.example.testcases.req_res">
+        <test-method signature="updateUser()[pri:1, instance:org.example.testcases.req_res@4690b489]" started-at="2022-11-12T20:10:08 PKT" name="updateUser" finished-at="2022-11-12T20:10:12 PKT" duration-ms="3282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUser -->
+      </class> <!-- org.example.testcases.req_res -->
+      <class name="org.example.testcases.restful_booker">
+        <test-method signature="createToken()[pri:1, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:12 PKT" name="createToken" finished-at="2022-11-12T20:10:15 PKT" duration-ms="3596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken -->
+        <test-method signature="create_booking()[pri:2, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:15 PKT" name="create_booking" finished-at="2022-11-12T20:10:21 PKT" duration-ms="5603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_booking -->
+        <test-method signature="update_booking()[pri:3, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:21 PKT" name="update_booking" finished-at="2022-11-12T20:10:24 PKT" duration-ms="2844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update_booking -->
+        <test-method signature="partially_updated_booking()[pri:4, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:24 PKT" name="partially_updated_booking" finished-at="2022-11-12T20:10:26 PKT" duration-ms="2281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partially_updated_booking -->
+        <test-method signature="delete_booking()[pri:5, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:26 PKT" name="delete_booking" finished-at="2022-11-12T20:10:30 PKT" duration-ms="3722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_booking -->
+        <test-method signature="check_Deleted_booking()[pri:6, instance:org.example.testcases.restful_booker@2f7c2f4f]" started-at="2022-11-12T20:10:30 PKT" name="check_Deleted_booking" finished-at="2022-11-12T20:10:33 PKT" duration-ms="3148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Deleted_booking -->
+      </class> <!-- org.example.testcases.restful_booker -->
+    </test> <!-- C:/Users/VenD/IdeaProjects/Restassured-Test-1 -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
