@@ -11,6 +11,5 @@ public class Endpoints {
     public static final String UserList_1 = "/api/users?page=1";
     public static final String UserList_2 = "/api/users?page=2";
     public static final String auth = "/auth";
-    public static String baseUrl_booker = "https://restful-booker.herokuapp.com";
-    public static String booker = "/booking";
+
 }
